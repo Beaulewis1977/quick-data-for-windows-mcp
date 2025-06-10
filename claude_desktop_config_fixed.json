@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "quick-data-windows": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "run_server.bat"
+      ],
+      "cwd": "C:\\Users\\YourUsername\\quick-data-for-windows-mcp",
+      "env": {
+        "LOG_LEVEL": "INFO",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      }
+    }
+  }
+}
