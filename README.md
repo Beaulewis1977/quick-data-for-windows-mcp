@@ -15,6 +15,8 @@ This is a **Windows-optimized fork** of the excellent [quick-data-mcp](https://g
 
 The original project provides powerful MCP server capabilities for data analytics, and this fork specifically addresses Windows compatibility issues and Claude Desktop integration challenges.
 
+**This is my first ever try at this. Please feel free to give suggestions and or criticisms. I loved the quick data mcp for claude code. There was nothing available like it for claude desktop so with the help of claude code we now have it.
+
 **Key Improvements Over Original:**
 - ✅ **Windows Path Handling** - Proper Windows file path support
 - ✅ **Claude Desktop Ready** - Pre-configured batch launchers and setup
@@ -303,5 +305,6 @@ Special thanks to [@disler](https://github.com/disler) for creating the foundati
 - [Python for Windows](https://www.python.org/downloads/windows/)
 
 ---
+**This is my first ever try at this. Please feel free to give suggestions and or criticisms. I loved the quick data mcp for claude code. There was nothing available like it for claude desktop so with the help of claude code we now have it.
 
 **Ready to analyze your data with AI? Load a CSV and start exploring! 🚀**
