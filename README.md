@@ -1,14 +1,25 @@
 # Quick Data for Windows MCP
 
-> **Windows-optimized MCP server for Claude Desktop providing universal data analytics capabilities for JSON/CSV files**
+> **Windows-optimized fork of [disler/quick-data-mcp](https://github.com/disler/quick-data-mcp) for Claude Desktop**
+> 
+> **Universal data analytics capabilities for JSON/CSV files - now working seamlessly on Windows!**
 
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![Windows](https://img.shields.io/badge/platform-Windows-blue.svg)](https://www.microsoft.com/windows)
 [![Claude Desktop](https://img.shields.io/badge/Claude-Desktop-purple.svg)](https://claude.ai/desktop)
+[![Original Project](https://img.shields.io/badge/fork-disler%2Fquick--data--mcp-green.svg)](https://github.com/disler/quick-data-mcp)
 
 ## 🚀 What This Does
 
-This MCP server transforms any CSV or JSON dataset into intelligent, AI-guided analytics workflows specifically optimized for Windows and Claude Desktop. It automatically adapts to ANY data structure without requiring manual configuration.
+This is a **Windows-optimized fork** of the excellent [quick-data-mcp](https://github.com/disler/quick-data-mcp) project by [@disler](https://github.com/disler). 
+
+The original project provides powerful MCP server capabilities for data analytics, and this fork specifically addresses Windows compatibility issues and Claude Desktop integration challenges.
+
+**Key Improvements Over Original:**
+- ✅ **Windows Path Handling** - Proper Windows file path support
+- ✅ **Claude Desktop Ready** - Pre-configured batch launchers and setup
+- ✅ **Dependency Management** - Automated installation scripts
+- ✅ **Troubleshooting** - Complete guides for common Windows issues
 
 ### ✨ Key Features
 
@@ -36,23 +47,30 @@ This MCP server transforms any CSV or JSON dataset into intelligent, AI-guided a
    cd quick-data-for-windows-mcp
    ```
 
-2. **Run the Windows setup script:**
-   ```bash
-   windows-setup.bat
+2. **Install dependencies:**
+   ```cmd
+   install_dependencies.bat
    ```
 
-3. **Configure Claude Desktop:**
+3. **Test the server:**
+   ```cmd
+   test_server.bat
+   ```
+
+4. **Configure Claude Desktop:**
    
-   Copy `claude_desktop_config.json.sample` to your Claude Desktop config directory:
-   ```bash
-   copy claude_desktop_config.json.sample "%APPDATA%\Claude\claude_desktop_config.json"
+   Copy the fixed configuration to Claude Desktop:
+   ```cmd
+   copy claude_desktop_config_fixed.json "%APPDATA%\Claude\claude_desktop_config.json"
    ```
    
-   **IMPORTANT:** Edit the copied config file and update these paths to your actual installation:
-   - Replace `C:\Users\YourUsername\` with your actual username
-   - Replace `quick-data-for-windows-mcp` with the full path to this project
+   **IMPORTANT:** Edit the config file and update the `cwd` path to your actual installation directory.
 
-4. **Restart Claude Desktop**
+5. **Restart Claude Desktop**
+
+### 🚨 Having Issues?
+
+If you see `ModuleNotFoundError: No module named 'mcp'`, check the [TROUBLESHOOTING.md](TROUBLESHOOTING.md) guide.
 
 ## 💻 Usage in Claude Desktop
 
@@ -253,9 +271,29 @@ MIT License - see LICENSE file for details.
 
 ## 🙏 Acknowledgments
 
-- Original project by [disler/quick-data-mcp](https://github.com/disler/quick-data-mcp)
-- Model Context Protocol by Anthropic
-- Built for the Claude Desktop community
+**This project is a Windows-optimized fork of the original [quick-data-mcp](https://github.com/disler/quick-data-mcp) by [@disler](https://github.com/disler).**
+
+### Original Project Credits
+- **Original Author:** [@disler](https://github.com/disler)
+- **Original Repository:** [disler/quick-data-mcp](https://github.com/disler/quick-data-mcp)
+- **Original Purpose:** MCP server for data analytics with Claude Code
+- **License:** MIT (maintained in this fork)
+
+### Windows Fork Contributions
+- **Windows Compatibility:** [@Beaulewis1977](https://github.com/Beaulewis1977)
+- **Claude Desktop Integration:** Community-driven improvements
+- **Troubleshooting & Documentation:** Enhanced for Windows users
+
+### Technology Stack
+- **Model Context Protocol:** [Anthropic](https://anthropic.com)
+- **Data Processing:** pandas, numpy, plotly, scikit-learn
+- **Platform:** Optimized for Windows + Claude Desktop
+
+**⭐ Please star both repositories:**
+- [Original Project](https://github.com/disler/quick-data-mcp) - For the core innovation
+- [This Fork](https://github.com/Beaulewis1977/quick-data-for-windows-mcp) - For Windows support
+
+Special thanks to [@disler](https://github.com/disler) for creating the foundational work that made this Windows adaptation possible!
 
 ## 🔗 Links
 
