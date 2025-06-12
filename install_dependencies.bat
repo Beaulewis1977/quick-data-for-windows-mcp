@@ -43,6 +43,15 @@ if errorlevel 1 (
 echo.
 echo Dependencies installed successfully!
 echo.
+echo Extracting server code...
+powershell -command "Expand-Archive -Path quick-data-for-windows-mcp.zip -DestinationPath . -Force"
+if errorlevel 1 (
+    echo ERROR: Failed to extract quick-data-for-windows-mcp.zip. Make sure PowerShell is available.
+    pause
+    exit /b 1
+)
+echo Server code extracted successfully.
+echo.
 echo Next steps:
 echo 1. Copy claude_desktop_config_fixed.json to %%APPDATA%%\Claude\claude_desktop_config.json
 echo 2. Update the "cwd" path in the config to match your installation location
